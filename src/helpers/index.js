@@ -27,3 +27,6 @@ export const obtenerHora = () => {
     return `${hora}:${minutos}`;
 }
 
+export const handleOnFocus = e => {
+    if(e.target.value === '0') e.target.value = ''
+}

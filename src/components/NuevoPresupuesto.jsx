@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Mensaje from './Mensaje'
+import { handleOnFocus } from '../helpers'
 
 const NuevoPresupuesto = ({ presupuesto, setPresupuesto, setIsValidPresupuesto }) => {
 
@@ -27,6 +28,8 @@ const NuevoPresupuesto = ({ presupuesto, setPresupuesto, setIsValidPresupuesto }
                 type="number"
                 placeholder="Añade tu presupuesto"
                 value={presupuesto}
+                // onFocus={e => e.target.select()}
+                onFocus={handleOnFocus}
                 onChange={e => setPresupuesto(Number(e.target.value))}
             />
         </div>

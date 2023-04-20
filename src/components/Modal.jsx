@@ -1,5 +1,6 @@
 import {useEffect, useState } from 'react'
 import Mensaje from './Mensaje'
+import { handleOnFocus } from '../helpers'
 import CerrarBtn from '../img/cerrar.svg'
 
 const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar, setGastoEditar}) => {
@@ -81,6 +82,7 @@ const Modal = ({setModal, animarModal, setAnimarModal, guardarGasto, gastoEditar
                     type="number"
                     placeholder="Ej. 300"
                     value={cantidadGasto}
+                    onFocus={handleOnFocus}
                     onChange={e => setCantidadGasto(Number(e.target.value))}
                 /> 
         </div>
